@@ -9,7 +9,6 @@ heroImageStyle: {
   display: block,
  }
 bgImageStyle: {
-  height: '500px'
+height:500px
 }
-
 ---

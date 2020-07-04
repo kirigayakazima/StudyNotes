@@ -8,6 +8,42 @@ module.exports = {
     ['meta', { name: 'viewport', content: 'width=device-width,initial-scale=1,user-scalable=no' }]
   ],
   theme: 'reco',
+  plugins: [
+    [
+      '@vuepress/last-updated',
+      {
+        transformer: (timestamp, lang) => {
+          // 不要忘了安装 moment
+          // moment 时间格式化文档戳这里 http://momentjs.cn/
+          const moment = require('moment')
+          moment.locale(lang)
+          return moment(timestamp).fromNow()
+        }
+      }
+    ],
+    ["sitemap", {
+      "hostname": "https://kirigayakazima.github.io", // 替换成你的 GitHub 地址
+      "exclude": ['/404.html'],
+      "dateFormatter": time => {
+        return time
+      }
+    }],
+    ['@vuepress/medium-zoom',{
+        selector: ".page img",
+        options: {
+          margin: 16,
+        background: "#202124de",
+        scrollOffset: 0
+        }
+    }],
+    ["nest", {
+      // 更多配置项以及配置项说明上 https://github.com/vxhly/vuepress-plugin-nest 查看
+      "color": "255,0,255",
+      "count": 100,
+      "opacity": 0.7
+    }],
+
+  ],
   themeConfig: {
     repo: 'kirigayakazima/StudyNotes',
     nav: [
@@ -39,18 +75,18 @@ module.exports = {
       }
     },
     friendLink: [
-      {
-        title: '午后南杂',
-        desc: 'Enjoy when you can, and endure when you must.',
-        email: '1156743527@qq.com',
-        link: 'https://www.recoluan.com'
-      },
-      {
-        title: 'vuepress-theme-reco',
-        desc: 'A simple and beautiful vuepress Blog & Doc theme.',
-        avatar: "https://vuepress-theme-reco.recoluan.com/icon_vuepress_reco.png",
-        link: 'https://vuepress-theme-reco.recoluan.com'
-      },
+      // {
+      //   title: '午后南杂',
+      //   desc: 'Enjoy when you can, and endure when you must.',
+      //   email: '1156743527@qq.com',
+      //   link: 'https://www.recoluan.com'
+      // },
+      // {
+      //   title: 'vuepress-theme-reco',
+      //   desc: 'A simple and beautiful vuepress Blog & Doc theme.',
+      //   avatar: "https://vuepress-theme-reco.recoluan.com/icon_vuepress_reco.png",
+      //   link: 'https://vuepress-theme-reco.recoluan.com'
+      // },
     ],
     logo: '/logo.png',
     // 搜索设置
