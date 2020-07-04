@@ -2,12 +2,14 @@ module.exports = {
   title: "清玄剑阁",
   description: '专注于高效的代码',
   dest: 'public',
+  base: '/StudyNotes/',
   head: [
     ['link', { rel: 'icon', href: '/xuaner.ico' }],
     ['meta', { name: 'viewport', content: 'width=device-width,initial-scale=1,user-scalable=no' }]
   ],
   theme: 'reco',
   themeConfig: {
+    repo: 'kirigayakazima/StudyNotes',
     nav: [
       { text: 'Home', link: '/', icon: 'reco-home' },
       { text: 'TimeLine', link: '/timeline/', icon: 'reco-date' },
