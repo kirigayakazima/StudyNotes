@@ -51,7 +51,7 @@ module.exports = {
       { text: 'Docs',
         icon: 'reco-message',
         items: [
-          { text: 'vuepress-reco', link: '/blogs/' }
+          { text: 'vuepress-reco', link: '/blogs/docs/theme-reco' }
         ]
       },
       { text: 'Contact',
