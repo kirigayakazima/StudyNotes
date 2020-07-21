@@ -45,7 +45,6 @@ module.exports = {
 
   ],
   themeConfig: {
-    repo: 'kirigayakazima/StudyNotes',
     nav: [
       { text: 'Home', link: '/', icon: 'reco-home' },
       { text: 'TimeLine', link: '/timeline/', icon: 'reco-date' },
